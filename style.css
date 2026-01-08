@@ -1,196 +1,76 @@
-/* Base Styles */
-body {
+:root {
+  --blue: #0d6efd;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-family: "Times New Roman", Times, serif;
-  background-color: #000;
-  color: #d1d5db;
+}
+
+body {
+  background: var(--white);
+  color: var(--blue);
   line-height: 1.6;
 }
 
-/* Container */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Header */
 header {
-  background-color: #0f172a; /* dark blue */
-  color: #ffffff;
-  padding: 3rem 0;
+  background: var(--blue);
+  color: var(--white);
+  padding: 20px;
   text-align: center;
 }
-header h1 {
-  margin: 0;
-  font-size: 3rem;
+
+nav {
+  margin-top: 10px;
 }
-header .subtitle {
-  margin-top: 0.5rem;
-  font-size: 1.25rem;
-}
-header .links {
-  margin-top: 1.5rem;
-}
-header .links a {
-  color: #93c5fd;
-  margin: 0 1rem;
+
+nav a {
+  color: var(--white);
   text-decoration: none;
-  font-size: 1rem;
-}
-header .links a:hover {
-  text-decoration: underline;
+  margin: 0 12px;
+  font-weight: bold;
 }
 
-/* Section Styles */
 section {
-  padding: 3rem 0;
-}
-.section-bg {
-  background-color: #0a0e23; /* dark background variation */
-}
-section h2 {
-  font-size: 2rem;
-  color: #93c5fd;
-  margin-bottom: 1.5rem;
-}
-section h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.skills-grid div {
-  flex: 1 1 45%;
-}
-.skills-grid ul {
-  padding-left: 1.25rem;
+h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--blue);
+  display: inline-block;
 }
 
-/* Projects */
-.project-grid {
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-.project-card {
-  background-color: #111827;
-  border-radius: 0.5rem;
-  border: 1px solid #374151;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  padding: 1.5rem;
-}
-.project-card h3 {
-  margin-top: 0;
-  font-size: 1.25rem;
-}
-.project-card a {
-  color: #60a5fa; /* light blue */
-  text-decoration: none;
-}
-.project-card a:hover {
-  text-decoration: underline;
+  gap: 20px;
 }
 
-/* Experience & Education Cards */
-.experience-card,
-.education-card {
-  background-color: #111827;
-  border-radius: 0.5rem;
-  border: 1px solid #374151;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  padding: 1.5rem;
-}
-.experience-card h3,
-.education-card h3 {
-  margin-top: 0;
-  font-size: 1.25rem;
-}
-.institution {
-  font-weight: bold;
-}
-.date {
-  color: #6b7280; /* gray-500 */
-  margin-bottom: 0.5rem;
+.card {
+  border: 2px solid var(--blue);
+  padding: 20px;
+  border-radius: 8px;
 }
 
-/* Awards List */
-.awards-list {
-  list-style-type: disc;
-  padding-left: 1.25rem;
-}
-.awards-list li {
-  margin-bottom: 0.5rem;
-}
-
-/* Contact Form */
-form .form-group {
-  margin-bottom: 1rem;
-}
-form label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: bold;
-  color: #e2e8f0;
-}
-form input,
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #374151;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  background-color: #0a0e23;
-  color: #e5e7eb;
-}
-form textarea {
-  resize: vertical;
-}
-form button {
-  display: inline-block;
-  background-color: #2563eb;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-form button:hover {
-  background-color: #1e3a8a;
-}
-
-/* Footer */
 footer {
-  background-color: #0f172a;
-  color: #e5e7eb;
+  background: var(--blue);
+  color: var(--white);
   text-align: center;
-  padding: 1rem 0;
+  padding: 20px;
+  margin-top: 40px;
 }
 
-/* Footer links */
-footer a {
-  color: #60a5fa;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Contact info in contact section */
-.contact-info {
-  margin-bottom: 1rem;
-  color: #d1d5db;
-}
-.contact-info a {
-  color: #60a5fa;
-  text-decoration: none;
-}
-.contact-info a:hover {
-  text-decoration: underline;
+button {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
 }
